@@ -5,7 +5,7 @@ Created by: skylord123 https://github.com/skylord123
 Docker Hub: https://hub.docker.com/r/skylord123/svencoop-server  
 GitHub: https://www.github.com/skylord123/docker-svencoop-server
 
-I couldn't get any of the other containers working so I decided to make my own.
+I couldn't get any of the other containers working so I decided to make my own.  
 If you have never heard of Sven Co-op I highly recommend you check it out. It's an awesome game and it's now [free on Steam](https://store.steampowered.com/app/225840/Sven_Coop/).
 
 Running the container
@@ -30,10 +30,10 @@ If you run multiple containers make sure to share the steamcmd folder between th
 
 After running the command steamcmd will start downloading the Sven Co-op dedicated server. Once that is finished it will launch the server and you should see the console output in your log.
 
-Env Options:
+#### Environment Variables
 - `GAME_PORT` - Game port for the server. Make sure this matches the port that users will use to connect or you may have issues (see below for more details)
 - `GAME_PARAMS` - Enter your arguments for `svends_run` (see above for example).
-- `VALIDATE` - Set the Variable to 'true' if you want to validate the installation otherwise leave it blank or set it to `false`.
+- `VALIDATE` - Set the Variable to 'true' if you want to validate the installation on container start otherwise leave it blank or set it to `false`.
 - `USERNAME` and `PASSWORD` - Steam user/pass for downloading (uses anonymous if not defined which works with Sven co-op so this is not necessary)
 
 
