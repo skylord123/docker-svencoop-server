@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 FROM i386/debian:stretch-slim
 
-MAINTAINER ich777
+MAINTAINER skylord123
 
 RUN dpkg --add-architecture i386 && \
     apt-get update && apt-get install --no-install-recommends -y \
