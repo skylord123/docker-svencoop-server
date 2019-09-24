@@ -35,6 +35,11 @@ After running the command steamcmd will start downloading the Sven Co-op dedicat
 - `GAME_PARAMS` - Enter your arguments for `svends_run` (see above for example).
 - `VALIDATE` - Set the Variable to `true` if you want to validate the installation on container start otherwise leave it blank or set it to `false`.
 - `USERNAME` and `PASSWORD` - Steam user/pass for downloading (uses anonymous if not defined which works with Sven co-op so this is not necessary)
+#### Auto restart unless stopped
+Docker can automatically restart containers when they crash by simply adding this to the docker run command:  
+```
+--restart=unless-stopped
+```
 
 
 ## Known Issues
