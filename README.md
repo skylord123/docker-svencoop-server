@@ -49,6 +49,12 @@ Make sure that `GAME_PORT` matches the same port that clients will be connecting
 
 Example: If you map `GAME_PORT` to 27015 (default) and then map it to 27016 on the host it will cause issues when clients try to add the server to their favorites (it will be added with whatever port the server is configured with in `GAME_PORT` even though it's really on another port).
 
+### Server fails to start with _stat error on Unraid 6.8 and above
+If you see an error that looks like this then you will need to change your container appdata path:
+```
+_stat on file /serverdata/serverfiles/svencoop/liblist.gam which appeared to exist failed!!!
+```
+For some reason Unraid 6.8 caused this error to start happening. You can fix this by specifying the path to the appdata folder on the disk instead of the share. So you would change `/mnt/user/appdata/svencoop` to `/mnt/cache/appdata/svencoop` for example. If someone figures out more about why this is happening open an issue to let me know.
 
 ## Report Issues or do Feature Requests
 Issues and feature requests can be created from the [issues](https://github.com/skylord123/docker-svencoop-server/issues) tab on github.
